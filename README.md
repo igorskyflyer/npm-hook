@@ -52,6 +52,49 @@ npm i "@igor.dvlpr/hook"
 
 ## 🤹🏼 API
 
+```ts
+function hook(
+  proto: any,
+  method: string,
+  handler: HandlerFn,
+  replace: boolean = false
+): boolean
+```
+
+Hooks onto a JavaScript prototype in order to extend, modify or completely replace a given method of it.
+
+<br>
+
+- `proto` - a prototype, e.g. `Array.prototype`, `Number.prototype`, etc.
+- `method` - a method to hook onto, e.g. 'push' of `Array.prototype`.
+- `handler` a custom function to run when the hooked method is called.
+- `replace` a Boolean indicating whether the prototype method should be replaced completely. Defaults to **false**.
+
+<br>
+
+Returns a Boolean whether the hooking onto was successful.
+
+<br>
+
+### Example
+
+```ts
+import { hook } from '@igor.dvlpr/hook'
+
+hook(Array.prototype, 'unshift', function (x) {
+	// any code can be here,
+	// not just owned by the prototype
+	// you're hooking/replacing
+  this.push(x * 2)
+})
+
+const array: number[] = []
+
+array.unshift(128)
+
+console.log(array) // [128, 256]
+```
+
 ---
 
 ## 🪪 License
