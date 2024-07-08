@@ -1,8 +1,8 @@
-# $project
+# Hook
 
 <br>
 
-$desc
+🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺
 
 <br>
 <br>
@@ -35,7 +35,7 @@ $desc
 Install it by executing:
 
 ```shell
-npm i "@igor.dvlpr/$pkg"
+npm i "@igor.dvlpr/hook"
 ```
 
 <br>
@@ -46,7 +46,7 @@ npm i "@igor.dvlpr/$pkg"
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/$repo/blob/main/LICENSE).
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-hook/blob/main/LICENSE).
 
 ---
 
