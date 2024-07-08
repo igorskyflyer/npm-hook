@@ -4,7 +4,7 @@
 
 <p align="center">
 	🪝 Hooks onto a JavaScript prototype, either extending or changing its <br>
-	behavior or replacing it completely. 👺
+	behavior or replacing it completely 👺
 </p>
 
 <br>
@@ -55,25 +55,25 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/jmap](https://www.npmjs.com/package/@igor.dvlpr/jmap)
 
-> __
+> _🕶️ Reads a JSON file into a Map. 🌻_
 
-[]()
+[@igor.dvlpr/strip-html](https://www.npmjs.com/package/@igor.dvlpr/strip-html)
 
-> __
+> _🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨_
 
-[]()
+[@igor.dvlpr/comment-it](https://www.npmjs.com/package/@igor.dvlpr/comment-it)
 
-> __
+> _📜 Formats the provided string as a comment, either a single or a multi line comment for the given programming language. 40 languages are currently supported. 💻_
 
-[]()
+[@igor.dvlpr/normalized-string](https://www.npmjs.com/package/@igor.dvlpr/normalized-string)
 
-> __
+> _💊 NormalizedString provides you with a String type with consistent line-endings, guaranteed. 📮_
 
-[]()
+[@igor.dvlpr/keppo](https://www.npmjs.com/package/@igor.dvlpr/keppo)
 
-> __
+> _🎡 Parse, manage, compare and output SemVer-compatible version numbers. 🛡_
 
 <br>
 <br>
