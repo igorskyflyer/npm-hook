@@ -2,7 +2,7 @@
 
 <br>
 
-🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺
+<p align="center">🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺</p>
 
 <br>
 <br>
