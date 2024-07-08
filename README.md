@@ -65,7 +65,7 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 [@igor.dvlpr/comment-it](https://www.npmjs.com/package/@igor.dvlpr/comment-it)
 
-> _📜 Formats the provided string as a comment, either a single or a multi line comment for the given programming language. 40 languages are currently supported. 💻_
+> _📜 Formats the provided string as a comment, either a single or a multi line comment for the given programming language. 💻_
 
 [@igor.dvlpr/normalized-string](https://www.npmjs.com/package/@igor.dvlpr/normalized-string)
 
