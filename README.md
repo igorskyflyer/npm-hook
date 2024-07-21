@@ -146,7 +146,7 @@ hook(Array.prototype, 'unshift', function (native, x) {
   // not just owned by the prototype
   // you're hooking/replacing
 
-  native.apply(this, [512])
+  native(512)
   this.push(x / 2)
 
   // must adhere to the original method's
@@ -158,7 +158,7 @@ hook(Array.prototype, 'unshift', function (native, x) {
 const array: number[] = []
 
 array.unshift(256)
-console.log(array.length) // [512, 256, 128]
+console.log(array) // [512, 256, 128]
 ```
 
 ---
