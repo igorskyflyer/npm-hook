@@ -141,23 +141,24 @@ Returns a Boolean whether the hooking onto was successful.
 ```ts
 import { hook } from '@igor.dvlpr/hook'
 
-hook(Array.prototype, 'unshift', function (_native, x) {
+hook(Array.prototype, 'unshift', function (native, x) {
   // any code can be here,
   // not just owned by the prototype
   // you're hooking/replacing
-  this.push(x * 2)
+
+  native.apply(this, [512])
+  this.push(x / 2)
 
   // must adhere to the original method's
   // return type
   // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift#return_value
-  return this.length // returns 2
+  return this.length // returns 3
 })
 
 const array: number[] = []
 
-array.unshift(128)
-
-console.log(array) // [128, 256]
+array.unshift(256)
+console.log(array.length) // [512, 256, 128]
 ```
 
 ---
