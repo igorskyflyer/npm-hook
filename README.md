@@ -38,7 +38,7 @@
 
 - [Usage](#-usage)
 - [API](#-api)
-    - [hook()](#hook)
+    - [hook()](#hook-1)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
