@@ -1,4 +1,4 @@
-# Hook
+<h1 align="center">Hook</h1>
 
 <br>
 
@@ -34,8 +34,17 @@
 <br>
 <br>
 
-> [!CAUTION]
-> This package provides ways of modifying the native prototype(s) of built-in JavaScript objects, use it only if you know what you're doing and with **caution** as it may cause unexpected results!
+## 📃 Table of contents
+
+- [Usage](#-usage)
+- [API](#-api)
+- [Examples](#-examples)
+- [Changelog](#-changelog)
+- [License](#-license)
+- [Related](#-related)
+- [Author](#-author)
+
+---
 
 <br>
 <br>
@@ -52,11 +61,19 @@ npm i "@igor.dvlpr/hook"
 
 ## 🤹🏼 API
 
+<br>
+
+> [!CAUTION]
+> This package provides ways of modifying the native prototype(s) of built-in JavaScript objects, use it only if you know what you're doing and with **caution** as it may cause unexpected results!
+>
+
+### hook()
+
 ```ts
 function hook(
-  proto: any,
+  proto: Prototype,
   method: string,
-  handler: HandlerFn,
+  handler: NativeMethodHook<Prototype, Method>,
   replace: boolean = false
 ): boolean
 ```
@@ -65,23 +82,41 @@ Hooks onto a JavaScript prototype in order to extend, modify or completely repla
 
 <br>
 
-- `proto` - a prototype, e.g. `Array.prototype`, `Number.prototype`, etc.
-- `method` - a method to hook onto, e.g. 'push' of `Array.prototype`.
-- `handler` a custom function to run when the hooked method is called.
-- `replace` a Boolean indicating whether the prototype method should be replaced completely. Defaults to **false**.
+#### `proto`
+
+A prototype, e.g. `Array.prototype`, `Number.prototype`, etc.
+
+<br>
+
+#### `method`
+
+A method to hook onto, e.g. `push` of `Array.prototype`.
+
+<br>
+
+#### `handler`
+
+A custom function to run when the hooked method is called.
+
+<br>
+
+#### `replace`
+
+A Boolean indicating whether the prototype method should be replaced completely.  
+Defaults to **false**.
 
 <br>
 
 Returns a Boolean whether the hooking onto was successful.
 
-<br>
+---
 
-### Example
+## ✨ Examples
 
 ```ts
 import { hook } from '@igor.dvlpr/hook'
 
-hook(Array.prototype, 'unshift', function (x) {
+hook(Array.prototype, 'unshift', function (native, x) {
 	// any code can be here,
 	// not just owned by the prototype
 	// you're hooking/replacing
@@ -94,6 +129,12 @@ array.unshift(128)
 
 console.log(array) // [128, 256]
 ```
+
+---
+
+## 📝 Changelog
+
+📑 Changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-hook/blob/main/CHANGELOG.md).
 
 ---
 
@@ -125,9 +166,9 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 > _🎡 Parse, manage, compare and output SemVer-compatible version numbers. 🛡_
 
-<br>
+---
+
 <br>
 
->
-> Provided by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
->
+### 👨🏻‍💻 Author
+Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
