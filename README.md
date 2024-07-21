@@ -113,8 +113,11 @@ The function has the following signature:
 <br>
 
 `this` will be resolved to the provided prototype.  
+
 `native` is the native method that's being overridden, with its original signature.  
+
 `...args: any[]` all other arguments passed after the `native` method.  
+
 `ReturnType<Type[Method]>` the return type of the handler is the same as the `native` method is.
 
 <br>
