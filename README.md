@@ -38,6 +38,7 @@
 
 - [Usage](#-usage)
 - [API](#-api)
+    - [hook()](#hook)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -66,6 +67,8 @@ npm i "@igor.dvlpr/hook"
 > [!CAUTION]
 > This package provides ways of modifying the native prototype(s) of built-in JavaScript objects, use it only if you know what you're doing and with **caution** as it may cause unexpected results!
 >
+
+<br>
 
 ### hook()
 
