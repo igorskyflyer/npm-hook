@@ -21,7 +21,10 @@ type NativeMethodHook<
  * @param replace A Boolean that indicates whether the native method's functionality should be replaced completely.
  * @returns A Boolean whether the hooking onto was successful.
  */
-export function hook<Prototype extends object, Method extends keyof Prototype>(
+export function hook<
+  Prototype extends object,
+  Method extends KeysOf<Prototype>
+>(
   proto: Prototype,
   method: Method,
   handler: NativeMethodHook<Prototype, Method>,
@@ -31,12 +34,14 @@ export function hook<Prototype extends object, Method extends keyof Prototype>(
     return false
   }
 
-  const native: Func = proto[method] as Func
+  let native: Func = proto[method] as Func
 
   proto[method] = function (this: Prototype, ...fnArgs: any[]) {
     if (!replace) {
       native.apply(this, fnArgs)
     }
+
+    native = native.bind(this)
 
     return handler.apply(this, [native as Prototype[Method], ...fnArgs])
   } as Prototype[Method]
