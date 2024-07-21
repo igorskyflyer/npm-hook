@@ -11,7 +11,7 @@ describe('🧪 Hook tests 🧪', () => {
   })
 
   test('#1 should have a length of 1', () => {
-    hook(Array.prototype, 'unshift', function () {})
+    hook(Array.prototype, 'unshift', (value: any): number => value)
 
     const array: number[] = []
 
@@ -24,8 +24,9 @@ describe('🧪 Hook tests 🧪', () => {
     hook(
       Array.prototype,
       'unshift',
-      function () {
+      function (): number {
         this.push(64)
+        return 64
       },
       true
     )
@@ -39,7 +40,7 @@ describe('🧪 Hook tests 🧪', () => {
 
   test('#3 should have a length of 2', () => {
     hook(Array.prototype, 'unshift', function () {
-      this.push(64)
+      return this.push(64)
     })
 
     const array: number[] = []
@@ -51,7 +52,7 @@ describe('🧪 Hook tests 🧪', () => {
 
   test('#4 should equal 56', () => {
     hook(Array.prototype, 'unshift', function () {
-      this.push(56)
+      return this.push(56)
     })
 
     const array: number[] = []
@@ -62,8 +63,8 @@ describe('🧪 Hook tests 🧪', () => {
   }) // #4
 
   test('#5 should equal x * 2', () => {
-    hook(Array.prototype, 'unshift', function (x) {
-      this.push(x * 2)
+    hook(Array.prototype, 'unshift', function (_native, x) {
+      return this.push(x * 2)
     })
 
     const array: number[] = []
