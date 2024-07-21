@@ -70,7 +70,7 @@ npm i "@igor.dvlpr/hook"
 
 <br>
 
-### hook()
+### hook
 
 ```ts
 function hook(
