@@ -38,7 +38,7 @@
 
 - [Usage](#-usage)
 - [API](#-api)
-    - [hook()](#hook-1)
+    - [hook()](#hook-boolean)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -70,7 +70,7 @@ npm i "@igor.dvlpr/hook"
 
 <br>
 
-### hook
+### hook(): boolean
 
 ```ts
 function hook(
