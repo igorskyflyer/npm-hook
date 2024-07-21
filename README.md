@@ -100,6 +100,22 @@ A method to hook onto, e.g. `push` of `Array.prototype`.
 #### `handler`
 
 A custom function to run when the hooked method is called.
+The function has the following signature:
+
+```ts
+(
+  this: Type,
+  native: Type[Method],
+  ...args: any[]
+) => ReturnType<Type[Method]>
+```
+
+<br>
+
+`this` will be resolved to the provided prototype.
+`native` is the native method that's being overridden, with its original signature.
+`...args: any[]` all other arguments passed after the `native` method.
+`ReturnType<Type[Method]>` the return type of the handler is the same as the `native` method is.
 
 <br>
 
