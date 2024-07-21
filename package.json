@@ -1,6 +1,6 @@
 {
   "name": "@igor.dvlpr/hook",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺",
   "sideEffects": false,
   "engines": {
@@ -21,6 +21,10 @@
     "prototype",
     "method",
     "prop",
+    "native",
+    "function",
+    "inject",
+    "injection",
     "igorskyflyer",
     "igor.dvlpr"
   ],
@@ -37,8 +41,9 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
-    "@types/node": "^20.14.10",
+    "@igor.dvlpr/common-types": "^1.2.0",
+    "@types/node": "^20.14.11",
     "typescript": "^5.5.3",
-    "vitest": "^2.0.1"
+    "vitest": "^2.0.3"
   }
 }
