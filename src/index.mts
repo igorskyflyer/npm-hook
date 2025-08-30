@@ -3,14 +3,14 @@
 import type { Func, KeysOf } from '@igorskyflyer/common-types'
 
 type NativeMethodHook<
-  Type extends object,
-  Method extends KeysOf<Type>
-> = Type[Method] extends Func
+  Prototype extends object,
+  Method extends KeysOf<Prototype>
+> = Prototype[Method] extends Func
   ? (
-      this: Type,
-      native: Type[Method],
-      ...args: any[]
-    ) => ReturnType<Type[Method]>
+      this: Prototype,
+      native: Prototype[Method],
+      ...args: Parameters<Extract<Prototype[Method], Func>>
+    ) => ReturnType<Prototype[Method]>
   : never
 
 /**
@@ -36,7 +36,10 @@ export function hook<
 
   let native: Func = proto[method] as Func
 
-  proto[method] = function (this: Prototype, ...fnArgs: any[]) {
+  proto[method] = function (
+    this: Prototype,
+    ...fnArgs: Parameters<Extract<Prototype[Method], Func>>
+  ) {
     if (!replace) {
       native.apply(this, fnArgs)
     }
