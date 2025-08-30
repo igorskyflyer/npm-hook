@@ -1,7 +1,7 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
 import { assert, beforeEach, describe, test } from 'vitest'
-import { hook } from '../src/index.mjs'
+import { hook } from '../src/index.js'
 
 type ArrayUnshift = typeof Array.prototype.unshift
 type ArrayUnshiftParam = Parameters<typeof Array.prototype.unshift>[0]
