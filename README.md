@@ -64,9 +64,9 @@ npm i @igorskyflyer/hook
 
 ## 🤹🏼 API
 
-> ## 🛑 CAUTION
+> ### 🛑 CAUTION
 >
-> ### Dangerous package
+> #### Dangerous package
 >
 > This package provides ways of modifying the native prototype(s) of built-in JavaScript objects, use it only if you know what you're doing and with **caution** as it may cause unexpected results!
 >
@@ -115,9 +115,9 @@ The function has the following signature:
 
 <br>
 
-> ℹ️ **NOTE**
+> ### ℹ️ NOTE
 >
-> *Binding*
+> #### Binding
 >
 > The native function is already bound to the same `this` as your handler at call time. This means you can call `native(...)` directly without worrying about `.bind(this)` - it will behave exactly as the original method would on the current instance. 😉
 >
@@ -149,9 +149,9 @@ Returns a Boolean whether the hooking onto was successful.
 <br>
 <br>
 
-> ℹ️ **NOTE**
+> ### ℹ️ NOTE
 >
-> *Unhooking*
+> #### Unhooking
 >
 > In situations where a method needs to be hooked temporarily - such as during debugging, instrumentation, or within a testing framework, it is advisable to keep a reference to the original method prior to applying the hook. This practice enables you to restore the prototype to its original condition after executing your custom logic, thereby preventing side effects from affecting unrelated code.
 >
