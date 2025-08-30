@@ -6,6 +6,7 @@
 
 ## v1.2.0 (*30-Aug-2025*)
 
+- **✅ fix**: infer native methods parameters type properly
 - **💻 dev**: upgrade Node to >= v22
 - **💻 dev**: upgrade dependencies
 
