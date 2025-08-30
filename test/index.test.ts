@@ -3,7 +3,10 @@
 import { assert, beforeEach, describe, test } from 'vitest'
 import { hook } from '../src/index.mjs'
 
-const native: any = Array.prototype.unshift
+type ArrayUnshift = typeof Array.prototype.unshift
+type ArrayUnshiftParam = Parameters<typeof Array.prototype.unshift>[0]
+
+const native: ArrayUnshift = Array.prototype.unshift
 
 describe('🧪 Hook tests 🧪', () => {
   beforeEach(() => {
@@ -11,7 +14,11 @@ describe('🧪 Hook tests 🧪', () => {
   })
 
   test('#1 should have a length of 1', () => {
-    hook(Array.prototype, 'unshift', (value: any): number => value)
+    hook(
+      Array.prototype,
+      'unshift',
+      (value: ArrayUnshiftParam): number => value
+    )
 
     const array: number[] = []
 
