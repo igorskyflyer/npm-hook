@@ -1,6 +1,6 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
-import type { Func, KeysOf } from '@igor.dvlpr/common-types'
+import type { Func, KeysOf } from '@igorskyflyer/common-types'
 
 type NativeMethodHook<
   Type extends object,
