@@ -64,9 +64,9 @@ npm i @igorskyflyer/hook
 
 ## 🤹🏼 API
 
-> 🛑 **CAUTION**
+> ## 🛑 CAUTION
 >
-> *Dangerous package*
+> ### Dangerous package
 >
 > This package provides ways of modifying the native prototype(s) of built-in JavaScript objects, use it only if you know what you're doing and with **caution** as it may cause unexpected results!
 >
