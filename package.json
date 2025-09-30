@@ -1,6 +1,6 @@
 {
     "name": "@igorskyflyer/hook",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺",
     "sideEffects": false,
     "engines": {
@@ -43,16 +43,18 @@
     "bugs": {
         "url": "https://github.com/igorskyflyer/npm-hook/issues"
     },
+    "dependencies": {
+        "@igorskyflyer/common-types": "^1.4.0"
+    },
     "devDependencies": {
-        "@biomejs/biome": "^2.2.2",
+        "@biomejs/biome": "^2.2.4",
         "@igorskyflyer/biome-config": "^2.1.0",
-        "@igorskyflyer/common-types": "^1.4.0",
-        "@types/node": "^22.18.0",
+        "@types/node": "^22.18.7",
         "typescript": "^5.9.2",
         "vitest": "^3.2.4"
     },
     "publishConfig": {
         "access": "public"
     },
-    "packageManager": "pnpm@10.15.0"
+    "packageManager": "pnpm@10.17.1"
 }
