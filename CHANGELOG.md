@@ -1,28 +1,37 @@
 # 📒 Changelog
 
-### of [@igorskyflyer/hook](https://github.com/igorskyflyer/npm-hook)
+### of [**@igorskyflyer/hook**](https://github.com/igorskyflyer/npm-hook)
 
+<br>
+
+## v1.2.1 (*30-Sep-2025*)
+
+- ✅ **fix**: infer native methods parameters type properly
+- 💻 **dev**: upgrade dependencies
+- 📜 **docs**: fix API mismatches 
+
+<br>
 <br>
 
 ## v1.2.0 (*30-Aug-2025*)
 
-- **✅ fix**: infer native methods parameters type properly
-- **💻 dev**: upgrade Node to >= v22
-- **💻 dev**: upgrade dependencies
+- ✅ **fix**: infer native methods parameters type properly
+- 💻 **dev**: upgrade Node to >= v22
+- 💻 **dev**: upgrade dependencies
 
 <br>
 <br>
 
 ## v1.1.0 (*21-Jul-2024*)
 
-- **✨ feat**: always bind `this` to the native method
-- **✅ fix**: fix type inference for the native method
-- **✅ fix**: fix type inference for the `this` method
-- **✅ fix**: fix type inference for the arguments of the native method
+- ✨ **feat**: always bind `this` to the native method
+- ✅ **fix**: fix type inference for the native method
+- ✅ **fix**: fix type inference for the `this` method
+- ✅ **fix**: fix type inference for the arguments of the native method
 
 <br>
 <br>
 
 ## v1.0.0 (*08-Jul-2024*)
 
-- **🚀 launch**: initial release 🎉
+- 🚀 **launch**: initial release 🎉
