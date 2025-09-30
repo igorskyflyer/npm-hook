@@ -19,7 +19,7 @@
 - [**Features**](#-features)
 - [**Usage**](#-usage)
 - [**API**](#-api)
-    - [hook()](#hook-boolean)
+    - [**hook()**](#hook-boolean)
 - [**Examples**](#️-examples)
 - [**Changelog**](#-changelog)
 - [**Support**](#-support)
