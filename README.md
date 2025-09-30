@@ -9,7 +9,7 @@
 
 
 <h4 align="center">
-  🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺}
+  🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺
 </h4>
 
 <br>
@@ -82,7 +82,7 @@ function hook<
   proto: Prototype,
   method: Method,
   handler: NativeMethodHook<Prototype, Method>,
-  replace?: boolean = false
+  replace?: boolean
 ): boolean
 ```
 
