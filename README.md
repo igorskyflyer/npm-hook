@@ -135,7 +135,7 @@ The function has the following signature:
 `...args: Parameters<Extract<Prototype[Method], Func>>` all other arguments passed after the `native` method.  
 
 
-`ReturnType<Type[Method]>` the return type of the handler is the same as the `native` method is.
+`ReturnType<Prototype[Method]>` the return type of the handler is the same as the `native` method is.
 
 <br>
 
