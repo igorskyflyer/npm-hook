@@ -4,7 +4,7 @@
 </div>
 
 <blockquote align="center">
-  Type-Safe Prototype Hooking • Extend Or Replace Native Methods • Minimal Overhead • Works Across Window, Document, And Arrays
+  Type-Safe Hooks • Extend Methods • Zero Overhead • Cross-Env
 </blockquote>
 
 
