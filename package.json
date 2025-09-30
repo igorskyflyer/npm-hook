@@ -19,18 +19,18 @@
         "pub": "pnpm test && git push origin main --tags"
     },
     "keywords": [
-        "prototype-hook",
+        "aop",
         "array-prototype",
+        "function-intercept",
+        "igor dimitrijević",
+        "igorskyflyer",
+        "javascript-utility",
         "method-hook",
+        "monkeypatch",
         "override-method",
         "polyfill",
-        "monkeypatch",
-        "aop",
-        "shim",
-        "function-intercept",
-        "javascript-utility",
-        "igor dimitrijević",
-        "igorskyflyer"
+        "prototype-hook",
+        "shim"
     ],
     "license": "MIT",
     "author": "Igor Dimitrijević <support@igorskyflyer.me> (https://github.com/igorskyflyer)",
