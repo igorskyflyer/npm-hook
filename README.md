@@ -80,7 +80,7 @@ function hook(
   proto: Prototype,
   method: KeysOf<Prototype>,
   handler: NativeMethodHook<Prototype, Method>,
-  replace: boolean = false
+  replace?: boolean = false
 ): boolean
 ```
 
@@ -139,7 +139,7 @@ The function has the following signature:
 
 #### `replace`
 
-A Boolean indicating whether the prototype method should be replaced completely.  
+An optional Boolean indicating whether the prototype method should be replaced completely.  
 Defaults to **false**.
 
 <br>
