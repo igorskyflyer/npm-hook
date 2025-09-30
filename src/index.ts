@@ -23,12 +23,12 @@ type NativeMethodHook<
  */
 export function hook<
   Prototype extends object,
-  Method extends KeysOf<Prototype>
+  Method extends KeysOf<Prototype> & string
 >(
   proto: Prototype,
   method: Method,
   handler: NativeMethodHook<Prototype, Method>,
-  replace: boolean = false
+  replace?: boolean
 ): boolean {
   if (!(method in proto) || typeof handler !== 'function') {
     return false
