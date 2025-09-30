@@ -3,29 +3,30 @@
   <h1>Hook</h1>
 </div>
 
-<br>
+<blockquote align="center">
+  Type-Safe Prototype Hooking • Extend Or Replace Native Methods • Minimal Overhead • Works Across Window, Document, And Arrays
+</blockquote>
+
 
 <h4 align="center">
-  🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺
+  🪝 Hooks onto a JavaScript prototype, either extending or changing its behavior or replacing it completely. 👺}
 </h4>
 
-<br>
 <br>
 
 ## 📃 Table of Contents
 
-- [Features](#-features)
-- [Usage](#-usage)
-- [API](#-api)
+- [**Features**](#-features)
+- [**Usage**](#-usage)
+- [**API**](#-api)
     - [hook()](#hook-boolean)
-- [Examples](#️-examples)
-- [Changelog](#-changelog)
-- [Support](#-support)
-- [License](#-license)
-- [Related](#-related)
-- [Author](#-author)
+- [**Examples**](#️-examples)
+- [**Changelog**](#-changelog)
+- [**Support**](#-support)
+- [**License**](#-license)
+- [**Related**](#-related)
+- [**Author**](#-author)
 
-<br>
 <br>
 
 ## 🤖 Features
@@ -40,7 +41,6 @@
 - 🎯 Minimal API - single `hook()` call with clear, predictable parameters
 - 🏗 Non-invasive - modifies only the targeted method without affecting others
 
-<br>
 <br>
 
 ## 🕵🏼 Usage
@@ -60,13 +60,12 @@ npm i @igorskyflyer/hook
 ```
 
 <br>
-<br>
 
 ## 🤹🏼 API
 
 > ### 🛑 CAUTION
 >
-> #### Dangerous package
+> #### Dangerous functionality
 >
 > This package provides ways of modifying the native prototype(s) of built-in JavaScript objects, use it only if you know what you're doing and with **caution** as it may cause unexpected results!
 >
@@ -76,9 +75,12 @@ npm i @igorskyflyer/hook
 ### hook(): boolean
 
 ```ts
-function hook(
+function hook<
+  Prototype extends object,
+  Method extends KeysOf<Prototype> & string
+>(
   proto: Prototype,
-  method: KeysOf<Prototype>,
+  method: Method,
   handler: NativeMethodHook<Prototype, Method>,
   replace?: boolean = false
 ): boolean
@@ -170,8 +172,6 @@ Array.prototype.unshift = originalUnshift
 ```
 
 to undo the modification. This method guarantees that your changes are contained, reversible, and safe for use in collaborative environments.
-
-<br>
 <br>
 
 ## 🗒️ Examples
@@ -199,22 +199,18 @@ array.unshift(256)
 console.log(array) // [512, 256, 128]
 ```
 
-
-<br>
 <br>
 
 ## 📝 Changelog
 
-📑 The changelog is available here, [CHANGELOG.md](https://github.com/igorskyflyer/npm-hook/blob/main/CHANGELOG.md).
+📑 Read about the latest changes in the [**CHANGELOG**](https://github.com/igorskyflyer/npm-hook/blob/main/CHANGELOG.md).
 
-<br>
 <br>
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-hook/blob/main/LICENSE).
+Licensed under the [**MIT license**](https://github.com/igorskyflyer/npm-hook/blob/main/LICENSE).
 
-<br>
 <br>
 
 ## 💖 Support
@@ -232,33 +228,38 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 </div>
 
 <br>
-<br>
 
 ## 🧬 Related
 
-[@igorskyflyer/jmap](https://www.npmjs.com/package/@igorskyflyer/jmap)
-
-> _🕶️ Reads a JSON file into a Map. 🌻_
-
-[@igorskyflyer/strip-html](https://www.npmjs.com/package/@igorskyflyer/strip-html)
+[**@igorskyflyer/strip-html**](https://www.npmjs.com/package/@igorskyflyer/strip-html)
 
 > _🥞 Removes HTML code from the given string. Can even extract text-only from the given an HTML string. ✨_
 
-[@igorskyflyer/comment-it](https://www.npmjs.com/package/@igorskyflyer/comment-it)
+<br>
 
-> _📜 Formats the provided string as a comment, either a single or a multi line comment for the given programming language. 💻_
+[**@igorskyflyer/valid-path**](https://www.npmjs.com/package/@igorskyflyer/valid-path)
 
-[@igorskyflyer/normalized-string](https://www.npmjs.com/package/@igorskyflyer/normalized-string)
-
-> _💊 NormalizedString provides you with a String type with consistent line-endings, guaranteed. 📮_
-
-[@igorskyflyer/keppo](https://www.npmjs.com/package/@igorskyflyer/keppo)
-
-> _🎡 Parse, manage, compare and output SemVer-compatible version numbers. 🛡_
+> _🧰 Determines whether a given value can be a valid file/directory name. 🏜_
 
 <br>
+
+[**@igorskyflyer/vscode-folderpicker**](https://www.npmjs.com/package/@igorskyflyer/vscode-folderpicker)
+
+> _✨ Fast, custom cross-platform folder picker and creator for VS Code with icons, validation, and instant navigation. 🎨_
+
 <br>
+
+[**@igorskyflyer/emojilyzer**](https://www.npmjs.com/package/@igorskyflyer/emojilyzer)
+
+> _💬 Emojifies strings, converting textual representations of emojis to graphical ones. 🖌️_
+
+<br>
+
+[**@igorskyflyer/zitto**](https://www.npmjs.com/package/@igorskyflyer/zitto)
+
+> _🤫 Zitto - quiet config, loud clarity. A zero-dependency TypeScript/JavaScript helper for merging defaults and options across Node, Deno, Bun, and browsers. 🍯_
+
 <br>
 
 ## 👨🏻‍💻 Author
-Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).
+Created by **Igor Dimitrijević ([*@igorskyflyer*](https://github.com/igorskyflyer/))**.
